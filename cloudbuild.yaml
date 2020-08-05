@@ -1,18 +1,22 @@
 steps:
 # Install
 - name: 'gcr.io/cloud-builders/npm'
+  entrypoint: npm
   args: ['install']
 
 #Test
 - name: 'gcr.io/cloud-builders/npm'
+  entrypoint: npm
   args: ['run', 'test']
 
 #Build
 - name: 'gcr.io/cloud-builders/npm'
+  entrypoint: npm
   args: ['run', 'build']
 
 #Deploy
 - name: 'gcr.io/$PROJECT_ID/firebase'
+  entrypoint: npm
   args: ['deploy']
 
 #Timeout
