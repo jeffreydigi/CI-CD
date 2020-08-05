@@ -15,4 +15,5 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/firebase'
   args: ['deploy']
 
-#Build-Test
+#Timeout
+timeout: 1200s
